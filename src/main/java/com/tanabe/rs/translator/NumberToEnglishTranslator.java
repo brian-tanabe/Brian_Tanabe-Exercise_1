@@ -1,6 +1,7 @@
 package com.tanabe.rs.translator;
 
 import com.ibm.icu.text.RuleBasedNumberFormat;
+import org.apache.commons.lang3.StringUtils;
 
 import java.math.BigDecimal;
 
@@ -19,6 +20,6 @@ public class NumberToEnglishTranslator {
 
         RuleBasedNumberFormat numberFormat = new RuleBasedNumberFormat(RuleBasedNumberFormat.SPELLOUT);
 
-        return String.format("%s and %02d/100 dollars", numberFormat.format(integerPart), fractionalPart);
+        return StringUtils.capitalize(String.format("%s and %02d/100 dollars", numberFormat.format(integerPart), fractionalPart));
     }
 }
