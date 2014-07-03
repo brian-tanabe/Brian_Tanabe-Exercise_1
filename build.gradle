@@ -16,7 +16,6 @@ buildscript {
 apply plugin: 'java'
 apply plugin: 'idea'
 apply plugin: 'shadow'
-apply plugin: 'groovy'
 
 jar {
     manifest.attributes("Main-Class": "com.tanabe.rs.application.Application")
