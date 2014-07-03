@@ -26,11 +26,11 @@ public class NumberHelperTest {
 
     @Test
     public void testGetFractionalPartFromNumberWithoutFractionalPart(){
-        assertEquals(BigDecimal.valueOf(0.0), getFractionalPart(10.0));
+        assertEquals(0, getFractionalPart(10.0));
     }
 
     @Test
     public void testGetFractionalPartFromNumberWithFractionalPart(){
-        assertEquals(BigDecimal.valueOf(0.14), getFractionalPart(3.14));
+        assertEquals(14, getFractionalPart(3.14));
     }
 }
