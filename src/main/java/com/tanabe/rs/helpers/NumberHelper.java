@@ -8,7 +8,7 @@ import java.math.BigDecimal;
 public class NumberHelper {
 
     public static double getIntegerPart(double number){
-        return Math.floor(number);
+        return BigDecimal.valueOf(number).setScale(0, BigDecimal.ROUND_FLOOR).doubleValue();
     }
 
     public static double getFractionalPart(double number){
