@@ -7,15 +7,15 @@ import java.math.BigDecimal;
  */
 public class NumberHelper {
 
-    public static double getIntegerPart(double number){
-        return BigDecimal.valueOf(number).setScale(0, BigDecimal.ROUND_FLOOR).doubleValue();
+    public static BigDecimal getIntegerPart(double number){
+        return BigDecimal.valueOf(number).setScale(0, BigDecimal.ROUND_FLOOR);
     }
 
-    public static double getFractionalPart(double number){
+    public static BigDecimal getFractionalPart(double number){
         BigDecimal numberAsBigDecimal = BigDecimal.valueOf(number);
         numberAsBigDecimal.setScale(2, BigDecimal.ROUND_FLOOR);
         numberAsBigDecimal = numberAsBigDecimal.subtract(BigDecimal.valueOf(number).setScale(0, BigDecimal.ROUND_FLOOR));
 
-        return numberAsBigDecimal.doubleValue();
+        return numberAsBigDecimal;
     }
 }

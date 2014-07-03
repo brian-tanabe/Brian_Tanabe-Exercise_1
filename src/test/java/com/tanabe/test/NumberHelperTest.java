@@ -3,6 +3,8 @@ package com.tanabe.test;
 
 import org.junit.Test;
 
+import java.math.BigDecimal;
+
 import static com.tanabe.rs.helpers.NumberHelper.getFractionalPart;
 import static com.tanabe.rs.helpers.NumberHelper.getIntegerPart;
 import static junit.framework.Assert.assertEquals;
@@ -14,21 +16,21 @@ public class NumberHelperTest {
 
     @Test
     public void testGetIntegerPartFromNumberWithFractionalPart(){
-        assertEquals(3.0, getIntegerPart(3.14));
+        assertEquals(BigDecimal.valueOf(3), getIntegerPart(3.14));
     }
 
     @Test
     public void testGetIntegerPartFromNumberWithoutFractionalPart(){
-        assertEquals(1.0, getIntegerPart(1.0));
+        assertEquals(BigDecimal.valueOf(1), getIntegerPart(1.0));
     }
 
     @Test
     public void testGetFractionalPartFromNumberWithoutFractionalPart(){
-        assertEquals(0.00, getFractionalPart(10.0));
+        assertEquals(BigDecimal.valueOf(0.0), getFractionalPart(10.0));
     }
 
     @Test
     public void testGetFractionalPartFromNumberWithFractionalPart(){
-        assertEquals(0.14, getFractionalPart(3.14));
+        assertEquals(BigDecimal.valueOf(0.14), getFractionalPart(3.14));
     }
 }
