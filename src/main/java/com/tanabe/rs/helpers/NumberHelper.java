@@ -6,7 +6,11 @@ package com.tanabe.rs.helpers;
 public class NumberHelper {
 
     public static double getIntegerPart(double number){
+        return Math.floor(number);
+    }
 
-        return -1.00;
+    public static double getFractionalPart(double number){
+
+        return -1.0;
     }
 }
