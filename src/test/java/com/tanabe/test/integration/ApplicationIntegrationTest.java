@@ -72,4 +72,11 @@ public class ApplicationIntegrationTest {
 
         assertEquals(MessageHelper.getHelpMessage(), byteArrayOutputStream.toString().trim());
     }
+
+    @Test
+    public void testIllegalArgumentsShouldShowHelpMessage(){
+        Application.main(new String[] { "Brian Tanabe loves Rally Software" });
+
+        assertEquals(MessageHelper.getHelpMessage(), byteArrayOutputStream.toString().trim());
+    }
 }
