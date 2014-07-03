@@ -33,4 +33,14 @@ public class NumberHelperTest {
     public void testGetFractionalPartFromNumberWithFractionalPart(){
         assertEquals(14, getFractionalPartTruncatedAfterTwoDecimalPlacesAsInteger(3.14));
     }
+
+    @Test
+    public void testTruncatingFractionalPartAfterTwoDecimalPlaces(){
+        assertEquals(14, getFractionalPartTruncatedAfterTwoDecimalPlacesAsInteger(3.1415));
+    }
+
+    @Test
+    public void testTruncatingFractionalPartAfterTwoDecimalPlacesWhereInputWouldTriggerRoundingUp(){
+        assertEquals(99, getFractionalPartTruncatedAfterTwoDecimalPlacesAsInteger(9.99999999));
+    }
 }
