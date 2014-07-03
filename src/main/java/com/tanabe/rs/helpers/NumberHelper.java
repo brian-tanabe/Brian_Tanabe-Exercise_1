@@ -1,0 +1,12 @@
+package com.tanabe.rs.helpers;
+
+/**
+ * Created by Brian on 7/2/2014.
+ */
+public class NumberHelper {
+
+    public static double getIntegerPart(double number){
+
+        return -1.00;
+    }
+}
