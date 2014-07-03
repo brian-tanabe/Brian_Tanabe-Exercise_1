@@ -1,4 +1,4 @@
-package com.tanabe.test;
+package com.tanabe.test.unit;
 
 import org.junit.Test;
 

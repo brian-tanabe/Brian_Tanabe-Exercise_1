@@ -1,6 +1,7 @@
-package com.tanabe.test;
+package com.tanabe.test.integration;
 
 import com.tanabe.rs.application.Application;
+import com.tanabe.rs.helpers.MessageHelper;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
@@ -63,5 +64,12 @@ public class ApplicationIntegrationTest {
         Application.main(new String[] { "0.55" });
 
         assertEquals("Zero and 55/100 dollars", byteArrayOutputStream.toString().trim());
+    }
+
+    @Test
+    public void testNoArgumentsShouldShowHelpMessage(){
+        Application.main(new String[] {});
+
+        assertEquals(MessageHelper.getHelpMessage(), byteArrayOutputStream.toString().trim());
     }
 }
