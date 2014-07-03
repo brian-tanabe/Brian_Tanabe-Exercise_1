@@ -19,4 +19,14 @@ public class NumberTranslatorTest {
     public void testOne(){
         assertEquals("One and 00/100 dollars", translateNumber(1.0));
     }
+
+    @Test
+    public void testFiftyFiveCents(){
+        assertEquals("Zero and 55/100 dollars", translateNumber(0.55));
+    }
+
+    @Test
+    public void testOneMillionTwoHundredThirtyFourThousandFiveHundredSixtySevenDollarsEightyNineCents(){
+        assertEquals("One million two hundred thirty-four thousand five hundred sixty-seven and 89/100 dollars", translateNumber(1234567.89));
+    }
 }
