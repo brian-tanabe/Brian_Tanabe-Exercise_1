@@ -36,6 +36,6 @@ public class ApplicationIntegrationTest {
         String[] args = new String[] { "1234567.89"};
         Application.main(args);
 
-        assertEquals("One million two hundred thirty-four thousand five hundred sixty-seven and 89/100 dollars", byteArrayOutputStream.toString());
+        assertEquals("One million two hundred thirty-four thousand five hundred sixty-seven and 89/100 dollars", byteArrayOutputStream.toString().trim());
     }
 }
