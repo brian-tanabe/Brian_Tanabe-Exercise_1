@@ -18,8 +18,11 @@ public class NumberToEnglishTranslator {
         BigDecimal integerPart = getIntegerPart(number);
         int fractionalPart = getFractionalPartTruncatedAfterTwoDecimalPlacesAsInteger(number);
 
-        RuleBasedNumberFormat numberFormat = new RuleBasedNumberFormat(RuleBasedNumberFormat.SPELLOUT);
-
-        return StringUtils.capitalize(String.format("%s and %02d/100 dollars", numberFormat.format(integerPart), fractionalPart));
+        return String.format("%s and %02d/100 dollars", getValueSpelledOut(integerPart), fractionalPart);
     }
+
+        protected static String getValueSpelledOut(BigDecimal value){
+            RuleBasedNumberFormat numberFormat = new RuleBasedNumberFormat(RuleBasedNumberFormat.SPELLOUT);
+            return StringUtils.capitalize(numberFormat.format(value));
+        }
 }
