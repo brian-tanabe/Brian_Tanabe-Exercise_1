@@ -11,11 +11,10 @@ public class NumberHelper {
         return BigDecimal.valueOf(number).setScale(0, BigDecimal.ROUND_FLOOR);
     }
 
-    public static BigDecimal getFractionalPart(double number){
+    public static int getFractionalPartTruncatedAfterTwoDecimalPlacesAsInteger(double number){
         BigDecimal numberAsBigDecimal = BigDecimal.valueOf(number);
         numberAsBigDecimal.setScale(2, BigDecimal.ROUND_FLOOR);
         numberAsBigDecimal = numberAsBigDecimal.subtract(BigDecimal.valueOf(number).setScale(0, BigDecimal.ROUND_FLOOR));
-
-        return numberAsBigDecimal;
+        return numberAsBigDecimal.multiply(BigDecimal.valueOf(100)).intValue();
     }
 }

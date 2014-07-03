@@ -5,7 +5,7 @@ import org.junit.Test;
 
 import java.math.BigDecimal;
 
-import static com.tanabe.rs.helpers.NumberHelper.getFractionalPart;
+import static com.tanabe.rs.helpers.NumberHelper.getFractionalPartTruncatedAfterTwoDecimalPlacesAsInteger;
 import static com.tanabe.rs.helpers.NumberHelper.getIntegerPart;
 import static junit.framework.Assert.assertEquals;
 
@@ -26,11 +26,11 @@ public class NumberHelperTest {
 
     @Test
     public void testGetFractionalPartFromNumberWithoutFractionalPart(){
-        assertEquals(0, getFractionalPart(10.0));
+        assertEquals(0, getFractionalPartTruncatedAfterTwoDecimalPlacesAsInteger(10.0));
     }
 
     @Test
     public void testGetFractionalPartFromNumberWithFractionalPart(){
-        assertEquals(14, getFractionalPart(3.14));
+        assertEquals(14, getFractionalPartTruncatedAfterTwoDecimalPlacesAsInteger(3.14));
     }
 }
