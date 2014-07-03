@@ -2,14 +2,10 @@ buildscript {
     repositories {
         mavenCentral()
     }
-    dependencies {
-        classpath('org.springframework.boot:spring-boot-starter:1.1.3.RELEASE')
-    }
 }
 
 apply plugin: 'java'
 apply plugin: 'idea'
-apply plugin: 'spring-boot'
 
 jar {
     baseName = 'brian-tanabe-exercise-one'
