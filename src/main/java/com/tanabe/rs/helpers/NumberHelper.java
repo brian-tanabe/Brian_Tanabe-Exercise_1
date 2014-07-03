@@ -10,6 +10,6 @@ public class NumberHelper {
     }
 
     public static double getFractionalPart(double number){
-        return Math.ceil(number) - number;
+        return number - Math.floor(number);
     }
 }

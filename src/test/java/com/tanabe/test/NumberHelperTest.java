@@ -26,4 +26,9 @@ public class NumberHelperTest {
     public void testGetFractionalPartFromNumberWithoutFractionalPart(){
         assertEquals(0.00, getFractionalPart(10.0));
     }
+
+    @Test
+    public void testGetFractionalPartFromNumberWithFractionalPart(){
+        assertEquals(0.14, getFractionalPart(3.14));
+    }
 }
