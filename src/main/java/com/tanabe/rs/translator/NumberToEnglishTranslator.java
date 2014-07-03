@@ -19,6 +19,6 @@ public class NumberToEnglishTranslator {
 
         RuleBasedNumberFormat numberFormat = new RuleBasedNumberFormat(RuleBasedNumberFormat.SPELLOUT);
 
-        return String.format("%s and %d/100 dollars", numberFormat.format(integerPart), fractionalPart);
+        return String.format("%s and %02d/100 dollars", numberFormat.format(integerPart), fractionalPart);
     }
 }
