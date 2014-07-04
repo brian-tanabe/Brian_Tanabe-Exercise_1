@@ -12,7 +12,7 @@ public class Application {
     public static void main(String[] args){
         try {
             CommandLineArgumentHelper argumentHelper = new CommandLineArgumentHelper(args);
-            double numberToTranslate = argumentHelper.getDoubleFromCommandLineArgumentsOrPrintHelpAndClose();
+            double numberToTranslate = argumentHelper.getDoubleFromCommandLineArgumentsOrPrintHelp();
             System.out.println(NumberToEnglishTranslator.translateNumber(numberToTranslate));
         } catch (Exception ex){
             System.out.println(MessageHelper.getHelpMessage());

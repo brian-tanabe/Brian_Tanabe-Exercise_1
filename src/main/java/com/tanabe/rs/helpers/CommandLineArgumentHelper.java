@@ -10,7 +10,7 @@ public class CommandLineArgumentHelper {
         this.argsFromCommandLine = argsFromCommandLine;
     }
 
-    public double getDoubleFromCommandLineArgumentsOrPrintHelpAndClose() throws IllegalArgumentException {
+    public double getDoubleFromCommandLineArgumentsOrPrintHelp() throws IllegalArgumentException {
         if(argsFromCommandLine.length != 1) {
             throw new IllegalArgumentException();
         } else {
